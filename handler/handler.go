@@ -1,8 +1,8 @@
 package handler
 
 import (
+	"fmt"
 	"nexus-seed-bot/api"
-	seedUtils "nexus-seed-bot/utils"
 	"time"
 
 	"go.uber.org/zap"
@@ -50,7 +50,11 @@ func HandleWormCatching(s *api.Service) {
 		wormsMetaData := s.GetNextWormTime()
 
 		if wormsMetaData.Data.IsCaught {
-			seedUtils.WaitUntilNextWorm(wormsMetaData.Data.NextWorm, s.Logger)
+			nextWormTime := wormsMetaData.Data.NextWorm
+			durationUntilNextWorm := time.Until(nextWormTime.Add(10 * time.Second))
+			s.Logger.Info(fmt.Sprintf("Waiting for %02d:%02d to catch the worm.", int(durationUntilNextWorm.Hours()), int(durationUntilNextWorm.Minutes())%60))
+			time.Sleep(durationUntilNextWorm)
+
 		} else {
 			s.CatchWorm()
 			s.GetBalance()

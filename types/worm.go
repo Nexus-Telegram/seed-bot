@@ -14,3 +14,14 @@ type CatchMetadata struct {
 type CatchMetadataResponse struct {
 	Data CatchMetadata `json:"data"`
 }
+type CatchedWorm struct {
+	Data struct {
+		Id        string    `json:"id"`
+		Type      string    `json:"type"`
+		Status    string    `json:"status"`
+		UpdatedAt time.Time `json:"updated_at"`
+		Reward    int       `json:"reward"`
+		OnMarket  bool      `json:"on_market"`
+		OwnerId   string    `json:"owner_id"`
+	} `json:"data"`
+}

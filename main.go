@@ -34,8 +34,8 @@ func main() {
 		client.SetHeaders(headers)
 
 		service := api.NewService(client, logger)
-		handler.HandleInitialize(service)
-		//go handler.HandleWormCatching(service)
+		//handler.HandleInitialize(service)
+		go handler.HandleWormCatching(service)
 		//go handler.HandleSeedClaim(service)
 		//go handler.HandleUpgrade(service)
 		//go handler.HandleTasks(service)

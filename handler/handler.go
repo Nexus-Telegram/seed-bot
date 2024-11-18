@@ -9,25 +9,38 @@ import (
 )
 
 func HandleSeedClaim(s *api.Service) {
+	// Attempt to get an initial seed claim
+	seedErr := s.GetSeed()
+	if seedErr != nil {
+		s.Logger.Error(seedErr.Error())
+	} else {
+		s.Logger.Info("Seed claimed")
+	}
+
 	for {
 		profile, err := s.GetProfile()
 		if err != nil {
 			s.Logger.Error(err.Error())
-			continue // Skip to the next iteration if getProfile fails
+			continue // Skip to the next iteration if GetProfile fails
 		}
 
 		timeUntilClaim := time.Until(profile.Data.LastClaim)
+		if timeUntilClaim < 0 {
+			timeUntilClaim = -timeUntilClaim // Make it positive
+		}
 
-		if timeUntilClaim > 3*time.Hour {
+		// Subtract 2 hours and 1 minute from timeUntilClaim
+		adjustedTimeUntilClaim := timeUntilClaim - (2*time.Hour + time.Minute)
+		if adjustedTimeUntilClaim <= 0 {
 			seedErr := s.GetSeed()
 			if seedErr != nil {
-				s.Logger.Error(seedErr.Error()) // Log seed error properly
+				s.Logger.Error(seedErr.Error())
+			} else {
+				s.Logger.Info("Seed claimed")
 			}
-		} else {
-			// Sleep until the next claim time
-			if timeUntilClaim > 0 { // Ensure timeUntilClaim is positive
-				time.Sleep(timeUntilClaim)
-			}
+		} else if adjustedTimeUntilClaim > 0 {
+			time.Sleep(adjustedTimeUntilClaim)
+			continue
 		}
 	}
 }
@@ -39,7 +52,7 @@ func HandleWormCatching(s *api.Service) {
 		if wormsMetaData.Data.IsCaught {
 			seedUtils.WaitUntilNextWorm(wormsMetaData.Data.NextWorm, s.Logger)
 		} else {
-			s.GetWorm()
+			s.CatchWorm()
 			s.GetBalance()
 		}
 	}
@@ -62,18 +75,15 @@ func HandleTasks(s *api.Service) {
 }
 func HandleUpgrade(s *api.Service) {
 	for {
-		// Aguardar por uma atualização do saldo
 		balance := <-s.BalanceCh
 		s.Logger.Info("Received balance update", zap.Int("balance", balance))
 
-		// Obter o perfil do usuário
 		profile, err := s.GetProfile()
 		if err != nil {
 			s.Logger.Error("Error fetching profile:", zap.Error(err))
 			continue
 		}
 
-		// Verificar o nível de upgrade atual
 		upgrades := profile.Data.Upgrades
 		var upgradeLevel int
 		if len(upgrades) > 0 {
@@ -102,4 +112,37 @@ func HandleUpgrade(s *api.Service) {
 			s.Logger.Info("Max upgrade level reached")
 		}
 	}
+}
+func HandleInitialize(s *api.Service) {
+	myEggs := s.GetMyEggs()
+	if myEggs.Total > 0 {
+		return
+	}
+	firstEgg, err := s.TakeFirstEgg()
+	if err != nil {
+		HandleInitialize(s)
+	}
+	hatchEggErr := s.HatchEgg(firstEgg.Id)
+	if hatchEggErr != nil {
+		return
+	}
+	s.Logger.Info("initialize completed successfully")
+
+}
+
+func handleBird(s *api.Service) {
+	birds, err := s.GetBirds()
+	if err != nil {
+		s.Logger.Error(err.Error())
+		return
+	}
+	for _, bird := range birds.Data {
+
+		_, err := s.ClickBird(bird.Id)
+		if err != nil {
+			s.Logger.Error(err.Error())
+		}
+		s.CatchWorm()
+	}
+
 }

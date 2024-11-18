@@ -23,20 +23,22 @@ func main() {
 		panic(err)
 	}
 	queryIDs := utils.ParseQueryIDs()
+
+	logger.Info(fmt.Sprintf("found %d query ids in ", len(queryIDs)))
 	for _, queryID := range queryIDs {
-		logger.Info(fmt.Sprintf("%s", queryID))
 
 		authHeaders := map[string]string{
 			"Telegram-Data": queryID,
 		}
 		headers := utils.MergeHeaders(seedUtils.GetCommonHeaders(), authHeaders)
 		client.SetHeaders(headers)
-		service := api.NewService(client, logger)
 
-		go handler.HandleWormCatching(service)
-		go handler.HandleSeedClaim(service)
-		go handler.HandleUpgrade(service)
-		go handler.HandleTasks(service)
+		service := api.NewService(client, logger)
+		handler.HandleInitialize(service)
+		//go handler.HandleWormCatching(service)
+		//go handler.HandleSeedClaim(service)
+		//go handler.HandleUpgrade(service)
+		//go handler.HandleTasks(service)
 
 	}
 	select {}

@@ -66,6 +66,7 @@ type Task struct {
 	Tickets      int      `json:"tickets"`
 	TaskUser     *string  `json:"task_user"`
 }
+
 type Progress struct {
 	Data []struct {
 		Id           string `json:"id"`
@@ -162,22 +163,11 @@ type Settings struct {
 		} `json:"transfer-worm-to-energy"`
 	} `json:"data"`
 }
+
 type TaskResponse struct {
 	Data []Task `json:"data"`
 }
 
-type CatchMetadata struct {
-	Type      string    `json:"type"`
-	CreatedAt time.Time `json:"created_at"`
-	EndedAt   time.Time `json:"ended_at"`
-	NextWorm  time.Time `json:"next_worm"`
-	Reward    int64     `json:"reward"`
-	IsCaught  bool      `json:"is_caught"`
-}
-
-type CatchMetadataResponse struct {
-	Data CatchMetadata `json:"data"`
-}
 type CatchData struct {
 	ID        string    `json:"id"`
 	Type      string    `json:"type"`

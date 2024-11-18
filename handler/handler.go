@@ -9,50 +9,38 @@ import (
 )
 
 func HandleSeedClaim(s *api.Service) {
-	// Attempt to get an initial seed claim
-	seedErr := s.GetSeed()
-	if seedErr != nil {
-		s.Logger.Error(seedErr.Error())
-	} else {
-		s.Logger.Info("Seed claimed")
-	}
-
 	for {
 		profile, err := s.GetProfile()
 		if err != nil {
 			s.Logger.Error(err.Error())
-			continue // Skip to the next iteration if GetProfile fails
+			return
 		}
 
-		timeUntilClaim := time.Until(profile.Data.LastClaim)
-		if timeUntilClaim < 0 {
-			timeUntilClaim = -timeUntilClaim // Make it positive
-		}
+		timeUntilLastClaim := time.Until(profile.Data.LastClaim)
 
 		// Subtract 2 hours and 1 minute from timeUntilClaim
-		adjustedTimeUntilClaim := timeUntilClaim - (2*time.Hour + time.Minute)
-		if adjustedTimeUntilClaim <= 0 {
+		TimeUntilClaim := timeUntilLastClaim + (2*time.Hour + 10*time.Second)
+		if TimeUntilClaim <= 0 {
 			seedErr := s.GetSeed()
 			if seedErr != nil {
 				s.Logger.Error(seedErr.Error())
-			} else {
-				s.Logger.Info("Seed claimed")
+				continue
 			}
-		} else if adjustedTimeUntilClaim > 0 {
-			time.Sleep(adjustedTimeUntilClaim)
-			continue
+			s.Logger.Info("Seed claimed")
 		}
+
+		s.Logger.Info(fmt.Sprintf("Waiting for %02dh%02dm to claim seed", int(TimeUntilClaim.Hours()), int(TimeUntilClaim.Minutes())%60))
+		time.Sleep(TimeUntilClaim)
 	}
 }
 
 func HandleWormCatching(s *api.Service) {
 	for {
 		wormsMetaData := s.GetNextWormTime()
-
 		if wormsMetaData.Data.IsCaught {
 			nextWormTime := wormsMetaData.Data.NextWorm
 			durationUntilNextWorm := time.Until(nextWormTime.Add(10 * time.Second))
-			s.Logger.Info(fmt.Sprintf("Waiting for %02d:%02d to catch the worm.", int(durationUntilNextWorm.Hours()), int(durationUntilNextWorm.Minutes())%60))
+			s.Logger.Info(fmt.Sprintf("Waiting for %02dh%02dm to catch the worm.", int(durationUntilNextWorm.Hours()), int(durationUntilNextWorm.Minutes())%60))
 			time.Sleep(durationUntilNextWorm)
 
 		} else {

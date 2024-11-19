@@ -57,12 +57,41 @@ func HandleTasks(s *api.Service) {
 		return
 	}
 	for _, task := range progresses.Data {
-		err := s.CompleteTask(task.Id)
-		if err != nil {
-			s.Logger.Error(err.Error())
+		if task.TaskUser != nil {
 			continue
 		}
+		if task.Type == types.FollowUs {
+			err := s.CompleteTaskWithoutConfirmation(task.Id)
+			if task.Id == "dc1bc321-a395-422a-be0d-f20bb6234d6e" || task.Id == "b380ece7-5b68-4a1e-9344-889769633d14" {
+				go func(task types.UniqueTask) {
+					time.Sleep(20 * time.Second)
+					err := s.CompleteTaskWithoutConfirmation(task.Id)
+					if err != nil {
+						s.Logger.Error(fmt.Sprintf("Error while completed task %s that need two times", task.Name))
+					}
+					s.Logger.Info(fmt.Sprintf("Completed task %s that needs two times", task.Name))
+				}(task)
 
+			}
+			if err != nil {
+				s.Logger.Error(err.Error())
+			}
+			s.Logger.Info(fmt.Sprintf("Task %s completed successfully ", task.Name))
+		}
+		if task.Type == types.Academy {
+			secret, exists := types.TaskSecrets[task.Id]
+			if exists {
+				err, _ := s.CompleteTaskWithSecret(task.Id, secret)
+				if err != nil {
+					s.Logger.Debug(fmt.Sprintf("Task %s completed successfully", task.Name))
+					continue
+				}
+				continue
+			}
+			s.Logger.Error("Secret Not found for task", zap.Any("task", task))
+			continue
+		}
+		continue
 	}
 
 }
@@ -106,24 +135,34 @@ func HandleUpgrade(s *api.Service) {
 		}
 	}
 }
-func HandleInitialize(s *api.Service) {
+func HandleInitializeBird(s *api.Service) {
 	myEggs := s.GetMyEggs()
 	if myEggs.Total > 0 {
 		return
 	}
+	birds, err := s.GetMyBirds()
+	if err != nil {
+		s.Logger.Error(err.Error())
+		return
+	}
+	if birds.Data.Total > 0 {
+		s.Logger.Info("Birds already initialized, skipping...")
+		return
+	}
 	firstEgg, err := s.TakeFirstEgg()
 	if err != nil {
-		HandleInitialize(s)
+		s.Logger.Error("error while catching first egg", zap.Error(err))
+		return
 	}
 	hatchEggErr := s.HatchEgg(firstEgg.Id)
 	if hatchEggErr != nil {
+		s.Logger.Error("error while catching hatch egg", zap.Error(hatchEggErr))
 		return
 	}
-	s.Logger.Info("initialize completed successfully")
-
+	s.Logger.Info("all initialization tasks successfully")
 }
 
-func handleBird(s *api.Service) {
+func HandleBird(s *api.Service) {
 	birds, err := s.GetBirds()
 	if err != nil {
 		s.Logger.Error(err.Error())
@@ -135,7 +174,10 @@ func handleBird(s *api.Service) {
 		if err != nil {
 			s.Logger.Error(err.Error())
 		}
-		s.CatchWorm()
+		//if bird.Status == 'hunting' && bird.HuntEndAt.Before(time.Now().UTC()) {
+		//	s
+		//
+		//}
 	}
 
 }

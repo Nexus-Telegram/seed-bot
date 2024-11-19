@@ -80,56 +80,6 @@ type LoginBonuses struct {
 		Amount    int       `json:"amount"`
 	} `json:"data"`
 }
-type Progress struct {
-	Data []struct {
-		Id           string `json:"id"`
-		Type         string `json:"type"`
-		Name         string `json:"name"`
-		Description  string `json:"description"`
-		RewardAmount int64  `json:"reward_amount"`
-		Sort         int    `json:"sort"`
-		Metadata     struct {
-			Url         string      `json:"url,omitempty"`
-			Name        string      `json:"name,omitempty"`
-			ImageUrl    string      `json:"image_url"`
-			GroupName   string      `json:"group_name,omitempty"`
-			GroupOrder  interface{} `json:"group_order,omitempty"`
-			PremiumOnly bool        `json:"premium_only,omitempty"`
-			IsTma       bool        `json:"is_tma,omitempty"`
-			QueryUrl    string      `json:"query_url,omitempty"`
-			LookupValue string      `json:"lookup_value,omitempty"`
-			QueryMethod string      `json:"query_method,omitempty"`
-			QueryParams struct {
-				MinGem  string `json:"min_gem"`
-				UserId  string `json:"user_id"`
-				RefCode string `json:"ref_code"`
-			} `json:"query_params,omitempty"`
-			SubgroupImg     string   `json:"subgroup_img,omitempty"`
-			SubgroupName    string   `json:"subgroup_name,omitempty"`
-			SubgroupType    string   `json:"subgroup_type,omitempty"`
-			AuthHeaderEnv   string   `json:"auth_header_env,omitempty"`
-			AuthHeaderName  string   `json:"auth_header_name,omitempty"`
-			AuthHeaderValue string   `json:"auth_header_value,omitempty"`
-			StoryMedia      string   `json:"story_media,omitempty"`
-			StoryContent    string   `json:"story_content,omitempty"`
-			Texts           []string `json:"texts,omitempty"`
-			IosUrl          string   `json:"ios_url,omitempty"`
-			Once            bool     `json:"once,omitempty"`
-			Excluded        bool     `json:"excluded,omitempty"`
-			AnswerLength    int      `json:"answer_length,omitempty"`
-			Important       string   `json:"important,omitempty"`
-		} `json:"metadata"`
-		Repeats  int `json:"repeats"`
-		Tickets  int `json:"tickets"`
-		TaskUser *struct {
-			Id           string `json:"id"`
-			Completed    bool   `json:"completed"`
-			RewardAmount int    `json:"reward_amount"`
-			Repeats      int    `json:"repeats"`
-			Tickets      int    `json:"tickets"`
-		} `json:"task_user"`
-	} `json:"data"`
-}
 type Settings struct {
 	Data struct {
 		BoardingEvent struct {

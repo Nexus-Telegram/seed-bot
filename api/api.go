@@ -21,7 +21,7 @@ func NewService(client *resty.Client, logger *zap.Logger) *Service {
 		Client:      client,
 		Logger:      logger,
 		BalanceCh:   make(chan int), // Initialize the channel
-		WormCh:      make(chan []types.CatchedWorm, 3),
+		WormCh:      make(chan []types.CatchedWorm),
 		BirdHunting: make(chan types.Bird),
 	}
 }

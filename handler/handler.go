@@ -45,8 +45,35 @@ func HandleWormCatching(s *api.Service) {
 			time.Sleep(durationUntilNextWorm)
 
 		} else {
-			s.CatchWorm()
-			s.GetBalance()
+			catchedWorm := s.CatchWorm()
+			if catchedWorm != nil {
+
+				if catchedWorm.Data.Status == "successful" {
+					s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", catchedWorm.Data.Type, catchedWorm.Data.Reward))
+					catchedWorms := []types.CatchedWorm{
+						{
+							Data: struct {
+								Id        string    `json:"id"`
+								Type      string    `json:"type"`
+								Status    string    `json:"status"`
+								UpdatedAt time.Time `json:"updated_at"`
+								Reward    int       `json:"reward"`
+								OnMarket  bool      `json:"on_market"`
+								OwnerId   string    `json:"owner_id"`
+							}{
+								Id:        catchedWorm.Data.Id,
+								Type:      catchedWorm.Data.Type,
+								Status:    catchedWorm.Data.Status,
+								UpdatedAt: catchedWorm.Data.UpdatedAt,
+								Reward:    catchedWorm.Data.Reward,
+								OnMarket:  catchedWorm.Data.OnMarket,
+								OwnerId:   catchedWorm.Data.OwnerId,
+							},
+						},
+					}
+					s.WormCh <- catchedWorms
+				}
+			}
 		}
 	}
 }

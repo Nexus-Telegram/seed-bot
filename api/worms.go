@@ -6,7 +6,6 @@ import (
 	"go.uber.org/zap"
 	"log"
 	"nexus-seed-bot/types"
-	"time"
 )
 
 func GetWorms() {
@@ -24,7 +23,7 @@ func (s *Service) GetNextWormTime() *types.CatchMetadataResponse {
 	return wormsRes.Result().(*types.CatchMetadataResponse)
 }
 
-func (s *Service) CatchWorm() {
+func (s *Service) CatchWorm() *types.CatchedWorm {
 	var catchedWormResponse types.CatchedWorm
 	res, err := s.Client.R().SetResult(&catchedWormResponse).Post("/worms/catch")
 	if err != nil {
@@ -33,19 +32,19 @@ func (s *Service) CatchWorm() {
 
 	if res.StatusCode() == 400 {
 		s.Logger.Info("Worm already caught")
-		return
+		return nil
 	}
 	if res.StatusCode() == 404 {
 		var errResp types.ErrorResponse
 		err := json.Unmarshal(res.Body(), &errResp)
 		if err != nil {
 			s.Logger.Error("Failed to unmarshal response", zap.Error(err))
-			return
+			return nil
 		}
 		if errResp.Code == "resource-not-found" && errResp.Message == "worm not found" {
 			s.Logger.Error(fmt.Sprintf("Error: %s, Message: %s", errResp.Code, errResp.Message))
 		}
-		return
+		return nil
 	}
 
 	if res.StatusCode() == 401 {
@@ -54,7 +53,7 @@ func (s *Service) CatchWorm() {
 		err := json.Unmarshal(res.Body(), &errResp)
 		if err != nil {
 			s.Logger.Error("Failed to unmarshal response", zap.Error(err))
-			return
+			return nil
 		}
 
 		if errResp.Code == "authentication" && errResp.Message == "telegram data expired" {
@@ -62,30 +61,5 @@ func (s *Service) CatchWorm() {
 			// Handle the error as needed, e.g., request a new authentication token
 		}
 	}
-	if catchedWormResponse.Data.Status == "successful" {
-		s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", catchedWormResponse.Data.Type, catchedWormResponse.Data.Reward))
-		catchedWorms := []types.CatchedWorm{
-			{
-				Data: struct {
-					Id        string    `json:"id"`
-					Type      string    `json:"type"`
-					Status    string    `json:"status"`
-					UpdatedAt time.Time `json:"updated_at"`
-					Reward    int       `json:"reward"`
-					OnMarket  bool      `json:"on_market"`
-					OwnerId   string    `json:"owner_id"`
-				}{
-					Id:        catchedWormResponse.Data.Id,
-					Type:      catchedWormResponse.Data.Type,
-					Status:    catchedWormResponse.Data.Status,
-					UpdatedAt: catchedWormResponse.Data.UpdatedAt,
-					Reward:    catchedWormResponse.Data.Reward,
-					OnMarket:  catchedWormResponse.Data.OnMarket,
-					OwnerId:   catchedWormResponse.Data.OwnerId,
-				},
-			},
-		}
-		s.WormCh <- catchedWorms
-		return
-	}
+	return &catchedWormResponse
 }

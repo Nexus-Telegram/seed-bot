@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"nexus-seed-bot/api"
+	"nexus-seed-bot/types"
 	"time"
 
 	"go.uber.org/zap"
@@ -68,11 +69,11 @@ func HandleTasks(s *api.Service) {
 func HandleUpgrade(s *api.Service) {
 	for {
 		balance := <-s.BalanceCh
-		s.Logger.Info("Received balance update", zap.Int("balance", balance))
+		s.Logger.Info(fmt.Sprintf("Balance updated %d", balance))
 
 		profile, err := s.GetProfile()
 		if err != nil {
-			s.Logger.Error("Error fetching profile:", zap.Error(err))
+			s.Logger.Error("Error fetching profile", zap.Error(err))
 			continue
 		}
 
@@ -136,5 +137,68 @@ func handleBird(s *api.Service) {
 		}
 		s.CatchWorm()
 	}
+
+}
+func isInList(list []string, item string) bool {
+	for _, v := range list {
+		if v == item {
+			return true
+		}
+	}
+	return false
+}
+func WaitUntilNewDay() {
+	now := time.Now().UTC()
+
+	nextDay := now.Add(24 * time.Hour).Truncate(24 * time.Hour)
+
+	nextDayWithOneHour := nextDay.Add(10 * time.Minute)
+
+	time.Sleep(time.Until(nextDayWithOneHour))
+}
+func HandleDaily(s *api.Service) {
+	loginStreak := s.GetDailyLoginStreak()
+	streakRewards := s.GetStreakReward()
+	for _, reward := range streakRewards.Data {
+		var createdRewards []string
+		if reward.Status == types.Created {
+			createdRewards = append(createdRewards, reward.Id)
+		}
+		if len(createdRewards) > 0 {
+			s.ClaimStreakReward(createdRewards)
+			s.Logger.Info("Rewards claimed successfully")
+		}
+	}
+
+	if loginStreak.Data.No == 0 || loginStreak.Data.CreatedAt.Day() != time.Now().UTC().Day() {
+		loginBonus := s.ClaimLoginBonus()
+		if loginBonus.Data.Timestamp.Day() != time.Now().UTC().Day() {
+			s.Logger.Error("Daily Quest failed to be claimed", zap.Any("loginBonus", loginBonus))
+			return
+		}
+
+		streakReward := s.GetStreakReward()
+		for _, oneReward := range streakReward.Data {
+			if oneReward.Status == types.Created {
+				var rewardCollector []string
+				for _, reward := range streakReward.Data {
+					rewardCollector = append(rewardCollector, reward.Id)
+				}
+
+				streakRewards := s.ClaimStreakReward(rewardCollector)
+				for _, claimedStreakReward := range streakRewards.Data {
+					if claimedStreakReward.Status == types.Received && isInList(rewardCollector, claimedStreakReward.Id) {
+						s.Logger.Info("Daily quest claimed successfully")
+					}
+				}
+
+			}
+		}
+	}
+	WaitUntilNewDay()
+
+	// After waiting for the next day, you can call the function again if needed.
+	// You can loop back here to continue the process.
+	HandleDaily(s)
 
 }

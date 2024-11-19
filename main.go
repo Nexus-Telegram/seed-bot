@@ -34,12 +34,13 @@ func main() {
 		client.SetHeaders(headers)
 
 		service := api.NewService(client, logger)
-		handler.HandleSeedClaim(service)
 
+		handler.HandleDaily(service)
 		//handler.HandleInitialize(service)
+		//handler.HandleSeedClaim(service)
 		//go handler.HandleWormCatching(service)
 		//go handler.HandleUpgrade(service)
-		//go handler.HandleTasks(service)
+		//handler.HandleTasks(service)
 
 	}
 	select {}

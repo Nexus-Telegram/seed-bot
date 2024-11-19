@@ -66,7 +66,20 @@ type Task struct {
 	Tickets      int      `json:"tickets"`
 	TaskUser     *string  `json:"task_user"`
 }
-
+type LoginBonusesCreate struct {
+	Data struct {
+		No        int       `json:"no"`
+		Timestamp time.Time `json:"timestamp"`
+		Amount    int       `json:"amount"`
+	} `json:"data"`
+}
+type LoginBonuses struct {
+	Data []struct {
+		No        int       `json:"no"`
+		Timestamp time.Time `json:"timestamp"`
+		Amount    int       `json:"amount"`
+	} `json:"data"`
+}
 type Progress struct {
 	Data []struct {
 		Id           string `json:"id"`

@@ -193,27 +193,21 @@ func HandleBird(s *api.Service) {
 		if err != nil {
 			s.Logger.Error(err.Error())
 		}
-		if birdIsReadyToComplete(bird) {
-			s.BirdHunting <- bird
+		var wormIds []string
+		catchedWorm := <-s.WormCh
+		for _, worm := range catchedWorm {
+			wormIds = append(wormIds, worm.Data.Id)
+		}
+		_, err = s.FeedBird(wormIds, bird.Id)
+		if err != nil {
+			s.Logger.Error(err.Error())
 		}
 	}
-	for {
-		birdHunting := <-s.BirdHunting
+	//TODO: Wait the birdHunting channel when a bird gets in Hunting status then wait the 12 hours for Complete it
+	go func() {
 
-		if birdIsReadyToComplete(birdHunting) {
-			var wormIds []string
-			catchedWorm := <-s.WormCh
-			for _, worm := range catchedWorm {
-				wormIds = append(wormIds, worm.Data.Id)
-			}
-			_, err := s.FeedBird(wormIds, birdHunting.Id)
-			if err != nil {
-				s.Logger.Error(err.Error())
-			}
-		}
+	}()
 
-		time.Sleep(time.Until(birdHunting.HuntEndAt))
-	}
 }
 func isInList(list []string, item string) bool {
 	for _, v := range list {

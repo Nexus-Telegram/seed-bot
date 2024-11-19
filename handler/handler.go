@@ -56,11 +56,20 @@ func HandleTasks(s *api.Service) {
 		s.Logger.Error("Error while fetching progress")
 		return
 	}
+	// TODO: Implement this
+	//upgradeTasks, err := s.getUpgradeTasks()
+	//if err != nil {
+	//	s.Logger.Error("Error while fetching upgrade tasks")
+	//}
+	//for _, upgradeTask := range upgradeTasks {
+	//	s.CompleteUpgradeTasks(task.Id)
+	//}
+
 	for _, task := range progresses.Data {
 		if task.TaskUser != nil {
 			continue
 		}
-		if task.Type == types.FollowUs {
+		if task.Type == types.FollowUs || task.Type == types.PlayApp || task.Type == types.AddList {
 			err := s.CompleteTaskWithoutConfirmation(task.Id)
 			if task.Id == "dc1bc321-a395-422a-be0d-f20bb6234d6e" || task.Id == "b380ece7-5b68-4a1e-9344-889769633d14" {
 				go func(task types.UniqueTask) {
@@ -69,7 +78,7 @@ func HandleTasks(s *api.Service) {
 					if err != nil {
 						s.Logger.Error(fmt.Sprintf("Error while completed task %s that need two times", task.Name))
 					}
-					s.Logger.Info(fmt.Sprintf("Completed task %s that needs two times", task.Name))
+					s.Logger.Info(fmt.Sprintf("Task %s completed successfull", task.Name))
 				}(task)
 
 			}
@@ -78,6 +87,7 @@ func HandleTasks(s *api.Service) {
 			}
 			s.Logger.Info(fmt.Sprintf("Task %s completed successfully ", task.Name))
 		}
+
 		if task.Type == types.Academy {
 			secret, exists := types.TaskSecrets[task.Id]
 			if exists {
@@ -95,46 +105,47 @@ func HandleTasks(s *api.Service) {
 	}
 
 }
-func HandleUpgrade(s *api.Service) {
-	for {
-		balance := <-s.BalanceCh
-		s.Logger.Info(fmt.Sprintf("Balance updated %d", balance))
 
-		profile, err := s.GetProfile()
-		if err != nil {
-			s.Logger.Error("Error fetching profile", zap.Error(err))
-			continue
-		}
-
-		upgrades := profile.Data.Upgrades
-		var upgradeLevel int
-		if len(upgrades) > 0 {
-			upgradeLevel = upgrades[0].UpgradeLevel
-		}
-		settings, err := s.GetSettings()
-		if err != nil {
-			s.Logger.Error(err.Error())
-			continue
-		}
-		UpgradePrices := settings.Data.MiningSpeed
-		if upgradeLevel < len(UpgradePrices) {
-			requiredBalance := UpgradePrices[upgradeLevel]
-
-			if balance >= requiredBalance {
-				err := s.BuyUpgrade()
-				if err != nil {
-					s.Logger.Error("Error while buying upgrade", zap.Error(err))
-				} else {
-					s.Logger.Info("Upgrade purchased successfully", zap.Int("level", upgradeLevel+1))
-				}
-			} else {
-				s.Logger.Info("Insufficient balance for next upgrade", zap.Int("required", requiredBalance), zap.Int("current", balance))
-			}
-		} else {
-			s.Logger.Info("Max upgrade level reached")
-		}
-	}
-}
+//	func HandleUpgrade(s *api.Service) {
+//		for {
+//			balance := <-s.BalanceCh
+//			s.Logger.Info(fmt.Sprintf("Balance updated %d", balance))
+//
+//			profile, err := s.GetProfile()
+//			if err != nil {
+//				s.Logger.Error("Error fetching profile", zap.Error(err))
+//				continue
+//			}
+//
+//			upgrades := profile.Data.Upgrades
+//			var upgradeLevel int
+//			if len(upgrades) > 0 {
+//				upgradeLevel = upgrades[0].UpgradeLevel
+//			}
+//			settings, err := s.GetSettings()
+//			if err != nil {
+//				s.Logger.Error(err.Error())
+//				continue
+//			}
+//			UpgradePrices := settings.Data.MiningSpeed
+//			if upgradeLevel < len(UpgradePrices) {
+//				requiredBalance := UpgradePrices[upgradeLevel]
+//
+//				if balance >= requiredBalance {
+//					err := s.BuyUpgrade()
+//					if err != nil {
+//						s.Logger.Error("Error while buying upgrade", zap.Error(err))
+//					} else {
+//						s.Logger.Info("Upgrade purchased successfully", zap.Int("level", upgradeLevel+1))
+//					}
+//				} else {
+//					s.Logger.Info("Insufficient balance for next upgrade", zap.Int("required", requiredBalance), zap.Int("current", balance))
+//				}
+//			} else {
+//				s.Logger.Info("Max upgrade level reached")
+//			}
+//		}
+//	}
 func HandleInitializeBird(s *api.Service) {
 	myEggs := s.GetMyEggs()
 	if myEggs.Total > 0 {
@@ -146,7 +157,7 @@ func HandleInitializeBird(s *api.Service) {
 		return
 	}
 	if birds.Data.Total > 0 {
-		s.Logger.Info("Birds already initialized, skipping...")
+		s.Logger.Info("BirdsData already initialized, skipping...")
 		return
 	}
 	firstEgg, err := s.TakeFirstEgg()
@@ -162,24 +173,47 @@ func HandleInitializeBird(s *api.Service) {
 	s.Logger.Info("all initialization tasks successfully")
 }
 
+func birdIsReadyToComplete(bird types.Bird) bool {
+	if bird.Status == "hunting" && bird.HuntEndAt.Before(time.Now().UTC()) {
+		return true
+	} else {
+		return false
+	}
+
+}
 func HandleBird(s *api.Service) {
 	birds, err := s.GetBirds()
 	if err != nil {
 		s.Logger.Error(err.Error())
 		return
 	}
-	for _, bird := range birds.Data {
-
+	for _, bird := range birds.Bird {
+		// TODO: Pegar o passaro pra saber se da pra clicar ou não antes de lançar o post
 		_, err := s.ClickBird(bird.Id)
 		if err != nil {
 			s.Logger.Error(err.Error())
 		}
-		//if bird.Status == 'hunting' && bird.HuntEndAt.Before(time.Now().UTC()) {
-		//	s
-		//
-		//}
+		if birdIsReadyToComplete(bird) {
+			s.BirdHunting <- bird
+		}
 	}
+	for {
+		birdHunting := <-s.BirdHunting
 
+		if birdIsReadyToComplete(birdHunting) {
+			var wormIds []string
+			catchedWorm := <-s.WormCh
+			for _, worm := range catchedWorm {
+				wormIds = append(wormIds, worm.Data.Id)
+			}
+			_, err := s.FeedBird(wormIds, birdHunting.Id)
+			if err != nil {
+				s.Logger.Error(err.Error())
+			}
+		}
+
+		time.Sleep(time.Until(birdHunting.HuntEndAt))
+	}
 }
 func isInList(list []string, item string) bool {
 	for _, v := range list {

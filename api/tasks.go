@@ -7,6 +7,33 @@ import (
 	"nexus-seed-bot/types"
 )
 
+type CompleteUpgradeTaskPayload struct {
+	Data struct {
+		Id   string `json:"id"`
+		Data struct {
+			Id      string `json:"id"`
+			Repeats int    `json:"repeats"`
+		} `json:"data"`
+	} `json:"data"`
+}
+
+//func (s *Service) CompleteUpgradeTask(taskID string) error {
+//	payload := CompleteUpgradeTaskPayload{
+//		Data: {
+//			Id: taskID,
+//		},
+//	}
+//	res, err := s.Client.R().SetBody(payload).Post(fmt.Sprintf("/tasks/%s", taskID))
+//	if err != nil {
+//		s.Logger.Error(err.Error())
+//		return err
+//	}
+//	if res.StatusCode() == 200 {
+//		s.Logger.Info(fmt.Sprintf("Success completing task: %s", taskID))
+//	}
+//	return nil
+//}
+
 func (s *Service) CompleteTaskWithoutConfirmation(taskID string) error {
 	payload := "{}"
 	res, err := s.Client.R().SetBody(payload).Post(fmt.Sprintf("/tasks/%s", taskID))

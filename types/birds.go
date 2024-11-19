@@ -23,7 +23,7 @@ type BirdsHappiness struct {
 		Price            interface{} `json:"price"`
 	} `json:"data"`
 }
-type BirdsData struct {
+type Bird struct {
 	Id               string      `json:"id"`
 	Type             string      `json:"type"`
 	Status           string      `json:"status"`
@@ -42,8 +42,11 @@ type BirdsData struct {
 	MarketId         interface{} `json:"market_id"`
 	Price            interface{} `json:"price"`
 }
-type Birds struct {
-	Data []BirdsData `json:"data"`
+type BirdData struct {
+	Bird Bird `json:"data"`
+}
+type BirdsData struct {
+	Bird []Bird `json:"data"`
 }
 
 type CompleteBirdHunterResponse struct {

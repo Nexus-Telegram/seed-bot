@@ -9,16 +9,20 @@ import (
 )
 
 type Service struct {
-	Client    *resty.Client
-	Logger    *zap.Logger
-	BalanceCh chan int // Channel to send balance updates
+	Client      *resty.Client
+	Logger      *zap.Logger
+	BalanceCh   chan int                 // Channel to send balance updates
+	WormCh      chan []types.CatchedWorm // Buffered channel for worms
+	BirdHunting chan types.Bird
 }
 
 func NewService(client *resty.Client, logger *zap.Logger) *Service {
 	return &Service{
-		Client:    client,
-		Logger:    logger,
-		BalanceCh: make(chan int), // Initialize the channel
+		Client:      client,
+		Logger:      logger,
+		BalanceCh:   make(chan int), // Initialize the channel
+		WormCh:      make(chan []types.CatchedWorm, 3),
+		BirdHunting: make(chan types.Bird),
 	}
 }
 
@@ -39,7 +43,7 @@ func (s *Service) GetBalance() int {
 		s.Logger.Error("Error while fetching balance:", zap.Error(err))
 	}
 	balance := response.Result().(*types.Balance).Balance
-	s.BalanceCh <- balance
+	//s.BalanceCh <- balance
 
 	return balance
 }

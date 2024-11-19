@@ -6,6 +6,7 @@ import (
 	"go.uber.org/zap"
 	"log"
 	"nexus-seed-bot/types"
+	"time"
 )
 
 func GetWorms() {
@@ -24,8 +25,8 @@ func (s *Service) GetNextWormTime() *types.CatchMetadataResponse {
 }
 
 func (s *Service) CatchWorm() {
-	var catchedWorm types.CatchedWorm
-	res, err := s.Client.R().SetResult(&catchedWorm).Post("/worms/catch")
+	var catchedWormResponse types.CatchedWorm
+	res, err := s.Client.R().SetResult(&catchedWormResponse).Post("/worms/catch")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -61,8 +62,30 @@ func (s *Service) CatchWorm() {
 			// Handle the error as needed, e.g., request a new authentication token
 		}
 	}
-	if catchedWorm.Data.Status == "successful" {
-		s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", catchedWorm.Data.Type, catchedWorm.Data.Reward))
+	if catchedWormResponse.Data.Status == "successful" {
+		s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", catchedWormResponse.Data.Type, catchedWormResponse.Data.Reward))
+		catchedWorms := []types.CatchedWorm{
+			{
+				Data: struct {
+					Id        string    `json:"id"`
+					Type      string    `json:"type"`
+					Status    string    `json:"status"`
+					UpdatedAt time.Time `json:"updated_at"`
+					Reward    int       `json:"reward"`
+					OnMarket  bool      `json:"on_market"`
+					OwnerId   string    `json:"owner_id"`
+				}{
+					Id:        catchedWormResponse.Data.Id,
+					Type:      catchedWormResponse.Data.Type,
+					Status:    catchedWormResponse.Data.Status,
+					UpdatedAt: catchedWormResponse.Data.UpdatedAt,
+					Reward:    catchedWormResponse.Data.Reward,
+					OnMarket:  catchedWormResponse.Data.OnMarket,
+					OwnerId:   catchedWormResponse.Data.OwnerId,
+				},
+			},
+		}
+		s.WormCh <- catchedWorms
 		return
 	}
 }

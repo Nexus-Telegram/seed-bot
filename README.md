@@ -33,7 +33,7 @@ Join our groups to connect, learn, and stay informed:
 1. 🌟 Use our **Nexus Telegram Tool** to fetch all your game data in seconds!
 2. 🗂️ It will automatically generate a `game-datas.txt` file containing the required data for all your Telegram accounts.
 3. 📝 Add your `api_key` to the `config.txt` file, and you’re all set!
-4. 🔁 Execute the `.exe` in the same folder of the `game-datas.txt`.
+4. ✅ Execute the `.exe` in the same folder of the `game-datas.txt`.
 
 ---
 
@@ -44,7 +44,7 @@ Join our groups to connect, learn, and stay informed:
 4. 🔍 Manually locate the required data value.
 5. 📝 Copy the value and paste it into the `game-datas.txt` file.
 6. 🔁 Repeat this for **each account**, one by one.
-7. 🔁 Execute the `.exe` in the same folder of the `game-datas.txt`.
+7. ✅ Execute the `.exe` in the same folder of the `game-datas.txt`.
 
 > 😅 This method is tedious and time-consuming. Save yourself the trouble—go with **Option 1**!
 

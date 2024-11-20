@@ -1,0 +1,25 @@
+import configparser
+import sys
+import csv
+import colorama
+import subprocess, requests, time, os
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
+bluec = Style.BRIGHT + Fore.BLUE
+redc = Style.BRIGHT + Fore.RED
+greenc = Style.BRIGHT + Fore.GREEN
+yellowc = Style.BRIGHT + Fore.YELLOW
+whitec = Style.BRIGHT + Fore.WHITE
+magentac = Style.BRIGHT + Fore.MAGENTA
+cyanc = Style.BRIGHT + Fore.CYAN
+
+
+print()
+print(f"{magentac}[*] Check out our telegram channel: https://t.me/nexustelegramchannel")
+print()
+print(f"{greenc}[*] Check out our telegram group: https://t.me/nexustelegramgroup")
+print()
+print(f"{cyanc}[*] Get the bot executable at our discord : https://discord.gg/V87Dgn4hyj")
+print()
+a=input("[*] Press any key to exit...")

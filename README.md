@@ -3,6 +3,9 @@
 
 🔗 **Game link**:  [🌟 Seed Bot](https://t.me/seed_coin_bot/app?startapp=1510207606)
 
+
+![Seed](https://cdn.discordapp.com/attachments/993919251775770664/1309315644214218812/seed-ezgif.com-speed.gif?ex=674122b7&is=673fd137&hm=c5e7f1bc144b64ec1d88254b8d1cf29b528a880a1cf91ae9de6628d82eb0f838&)
+
 ---
 
 ## 🚀 **Maximize Your Farming with Nexus Telegram Tool**

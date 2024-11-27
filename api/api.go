@@ -2,7 +2,7 @@ package api
 
 import (
 	"fmt"
-	"nexus-seed-bot/types"
+	"github.com/nexus-telegram/seed-bot/types"
 
 	"github.com/go-resty/resty/v2"
 	"go.uber.org/zap"
@@ -11,8 +11,8 @@ import (
 type Service struct {
 	Client      *resty.Client
 	Logger      *zap.Logger
-	BalanceCh   chan int                 // Channel to send balance updates
-	WormCh      chan []types.CatchedWorm // Buffered channel for worms
+	BalanceCh   chan int                // Channel to send balance updates
+	WormCh      chan []types.CaughtWorm // Buffered channel for worms
 	BirdHunting chan types.Bird
 }
 
@@ -21,7 +21,7 @@ func NewService(client *resty.Client, logger *zap.Logger) *Service {
 		Client:      client,
 		Logger:      logger,
 		BalanceCh:   make(chan int), // Initialize the channel
-		WormCh:      make(chan []types.CatchedWorm),
+		WormCh:      make(chan []types.CaughtWorm),
 		BirdHunting: make(chan types.Bird),
 	}
 }

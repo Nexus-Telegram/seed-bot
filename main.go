@@ -3,16 +3,16 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	nexusUtils "github.com/nexus-telegram/nexus-core/utils"
 	"github.com/nexus-telegram/seed-bot/api"
+	"github.com/nexus-telegram/seed-bot/utils"
+
+	"github.com/nexus-telegram/seed-bot/handler"
 	"net/http"
 	"net/url"
-	"nexus-seed-bot/handler"
 	"time"
 
-	seedUtils "nexus-seed-bot/utils"
-
 	nexuslogger "github.com/Nexus-Telegram/nexus/logger"
-	"github.com/Nexus-Telegram/nexus/utils"
 	"go.uber.org/zap"
 
 	"github.com/go-resty/resty/v2"
@@ -50,7 +50,7 @@ func processAccount(queryID string, client *resty.Client, logger *zap.Logger) {
 	authHeaders := map[string]string{
 		"Telegram-Data": queryID,
 	}
-	headers := utils.MergeHeaders(seedUtils.GetCommonHeaders(), authHeaders)
+	headers := nexusUtils.MergeHeaders(utils.GetCommonHeaders(), authHeaders)
 	client.SetHeaders(headers)
 
 	service := api.NewService(client, logger)
@@ -91,7 +91,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	queryIDs := utils.ParseQueryIDs()
+	queryIDs := nexusUtils.ParseQueryIDs()
 
 	logger.Info(fmt.Sprintf("found %d query ids in ", len(queryIDs)))
 	for _, queryID := range queryIDs {

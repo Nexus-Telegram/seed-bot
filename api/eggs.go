@@ -2,8 +2,8 @@ package api
 
 import (
 	"errors"
+	"github.com/nexus-telegram/seed-bot/types"
 	"go.uber.org/zap"
-	"nexus-seed-bot/types"
 )
 
 func (s *Service) GetMyEggs() *types.EggData {
@@ -63,9 +63,4 @@ func (s *Service) HatchEgg(eggID string) error {
 		return errors.New("failed to hatch egg ")
 	}
 	return nil
-}
-
-func getEgg() {
-	// https://alb.seeddao.org/api/v1/egg/2841614e-6501-4a91-8809-0d8581505010
-
 }

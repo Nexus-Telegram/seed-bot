@@ -2,8 +2,8 @@ package api
 
 import (
 	"errors"
+	"github.com/nexus-telegram/seed-bot/types"
 	"go.uber.org/zap"
-	"nexus-seed-bot/types"
 	"strconv"
 )
 

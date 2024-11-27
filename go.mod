@@ -1,4 +1,4 @@
-module github.com/Nexus-Telegram/seed-bot-source
+module github.com/nexus-telegram/seed-bot
 
 go 1.23.3
 

@@ -2,8 +2,8 @@ package handler
 
 import (
 	"fmt"
-	"nexus-seed-bot/api"
-	"nexus-seed-bot/types"
+	"github.com/nexus-telegram/seed-bot/api"
+	"github.com/nexus-telegram/seed-bot/types"
 	"time"
 
 	"go.uber.org/zap"
@@ -45,11 +45,11 @@ func HandleWormCatching(s *api.Service) {
 			time.Sleep(durationUntilNextWorm)
 
 		} else {
-			catchedWorm := s.CatchWorm()
-			if catchedWorm != nil {
-				if catchedWorm.Data.Status == "successful" {
-					s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", catchedWorm.Data.Type, catchedWorm.Data.Reward))
-					catchedWorms := []types.CatchedWorm{
+			caughtWorm := s.CatchWorm()
+			if caughtWorm != nil {
+				if caughtWorm.Data.Status == "successful" {
+					s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", caughtWorm.Data.Type, caughtWorm.Data.Reward))
+					caughtWorms := []types.CaughtWorm{
 						{
 							Data: struct {
 								Id        string    `json:"id"`
@@ -60,17 +60,17 @@ func HandleWormCatching(s *api.Service) {
 								OnMarket  bool      `json:"on_market"`
 								OwnerId   string    `json:"owner_id"`
 							}{
-								Id:        catchedWorm.Data.Id,
-								Type:      catchedWorm.Data.Type,
-								Status:    catchedWorm.Data.Status,
-								UpdatedAt: catchedWorm.Data.UpdatedAt,
-								Reward:    catchedWorm.Data.Reward,
-								OnMarket:  catchedWorm.Data.OnMarket,
-								OwnerId:   catchedWorm.Data.OwnerId,
+								Id:        caughtWorm.Data.Id,
+								Type:      caughtWorm.Data.Type,
+								Status:    caughtWorm.Data.Status,
+								UpdatedAt: caughtWorm.Data.UpdatedAt,
+								Reward:    caughtWorm.Data.Reward,
+								OnMarket:  caughtWorm.Data.OnMarket,
+								OwnerId:   caughtWorm.Data.OwnerId,
 							},
 						},
 					}
-					s.WormCh <- catchedWorms
+					s.WormCh <- caughtWorms
 				}
 			}
 		}
@@ -83,7 +83,7 @@ func HandleTasks(s *api.Service) {
 		s.Logger.Error("Error while fetching progress")
 		return
 	}
-	// TODO: Implement this
+	// TODO: Implement upgrade tasks
 	//upgradeTasks, err := s.getUpgradeTasks()
 	//if err != nil {
 	//	s.Logger.Error("Error while fetching upgrade tasks")
@@ -213,14 +213,14 @@ func HandleBird(s *api.Service) {
 		return
 	}
 	for _, bird := range birds.Bird {
-		// TODO: Pegar o passaro pra saber se da pra clicar ou não antes de lançar o post
+		// TODO: Get the bird to check if it can be clicked before making the POST request
 		_, err := s.ClickBird(bird.Id)
 		if err != nil {
 			s.Logger.Error(err.Error())
 		}
 		var wormIds []string
-		catchedWorm := <-s.WormCh
-		for _, worm := range catchedWorm {
+		caughtWorm := <-s.WormCh
+		for _, worm := range caughtWorm {
 			wormIds = append(wormIds, worm.Data.Id)
 		}
 		_, err = s.FeedBird(wormIds, bird.Id)
@@ -229,8 +229,6 @@ func HandleBird(s *api.Service) {
 		}
 	}
 	// TODO: Wait the birdHunting channel when a bird gets in Hunting status then wait the 12 hours for Complete it
-	go func() {
-	}()
 }
 
 func isInList(list []string, item string) bool {
@@ -296,7 +294,4 @@ func HandleDaily(s *api.Service) {
 	// After waiting for the next day, you can call the function again if needed.
 	// You can loop back here to continue the process.
 	HandleDaily(s)
-}
-
-func handleGuild() {
 }

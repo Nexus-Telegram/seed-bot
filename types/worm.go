@@ -14,7 +14,7 @@ type CatchMetadata struct {
 type CatchMetadataResponse struct {
 	Data CatchMetadata `json:"data"`
 }
-type CatchedWorm struct {
+type CaughtWorm struct {
 	Data struct {
 		Id        string    `json:"id"`
 		Type      string    `json:"type"`

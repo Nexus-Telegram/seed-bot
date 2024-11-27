@@ -3,17 +3,10 @@ package api
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/nexus-telegram/seed-bot/types"
 	"go.uber.org/zap"
 	"log"
-	"nexus-seed-bot/types"
 )
-
-func GetWorms() {
-
-	//GET
-	// https://alb.seeddao.org/api/v1/worms/me-all
-
-}
 
 func (s *Service) GetNextWormTime() *types.CatchMetadataResponse {
 	wormsRes, err := s.Client.R().SetResult(&types.CatchMetadataResponse{}).Get("/worms")
@@ -23,9 +16,9 @@ func (s *Service) GetNextWormTime() *types.CatchMetadataResponse {
 	return wormsRes.Result().(*types.CatchMetadataResponse)
 }
 
-func (s *Service) CatchWorm() *types.CatchedWorm {
-	var catchedWormResponse types.CatchedWorm
-	res, err := s.Client.R().SetResult(&catchedWormResponse).Post("/worms/catch")
+func (s *Service) CatchWorm() *types.CaughtWorm {
+	var caughtWormResponse types.CaughtWorm
+	res, err := s.Client.R().SetResult(&caughtWormResponse).Post("/worms/catch")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -49,7 +42,7 @@ func (s *Service) CatchWorm() *types.CatchedWorm {
 
 	if res.StatusCode() == 401 {
 		var errResp types.ErrorResponse
-		// SetResult automatically unmarshals the body into the provided struct
+		// SetResult automatically unmarshal the body into the provided struct
 		err := json.Unmarshal(res.Body(), &errResp)
 		if err != nil {
 			s.Logger.Error("Failed to unmarshal response", zap.Error(err))
@@ -61,5 +54,5 @@ func (s *Service) CatchWorm() *types.CatchedWorm {
 			// Handle the error as needed, e.g., request a new authentication token
 		}
 	}
-	return &catchedWormResponse
+	return &caughtWormResponse
 }

@@ -1,8 +1,8 @@
 package api
 
 import (
+	"github.com/nexus-telegram/seed-bot/types"
 	"net/http"
-	"nexus-seed-bot/types"
 
 	"go.uber.org/zap"
 )

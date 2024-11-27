@@ -3,8 +3,8 @@ package api
 import (
 	"errors"
 	"fmt"
+	"github.com/nexus-telegram/seed-bot/types"
 	"go.uber.org/zap"
-	"nexus-seed-bot/types"
 )
 
 type CompleteUpgradeTaskPayload struct {

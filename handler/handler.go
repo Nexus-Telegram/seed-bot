@@ -47,7 +47,6 @@ func HandleWormCatching(s *api.Service) {
 		} else {
 			catchedWorm := s.CatchWorm()
 			if catchedWorm != nil {
-
 				if catchedWorm.Data.Status == "successful" {
 					s.Logger.Info(fmt.Sprintf("Successfully catch worm of type %s and reward %d", catchedWorm.Data.Type, catchedWorm.Data.Reward))
 					catchedWorms := []types.CatchedWorm{
@@ -77,6 +76,7 @@ func HandleWormCatching(s *api.Service) {
 		}
 	}
 }
+
 func HandleTasks(s *api.Service) {
 	progresses := s.GetProgress()
 	if progresses == nil {
@@ -107,7 +107,6 @@ func HandleTasks(s *api.Service) {
 					}
 					s.Logger.Info(fmt.Sprintf("Task %s completed successfull", task.Name))
 				}(task)
-
 			}
 			if err != nil {
 				s.Logger.Error(err.Error())
@@ -130,7 +129,6 @@ func HandleTasks(s *api.Service) {
 		}
 		continue
 	}
-
 }
 
 //	func HandleUpgrade(s *api.Service) {
@@ -206,8 +204,8 @@ func birdIsReadyToComplete(bird types.Bird) bool {
 	} else {
 		return false
 	}
-
 }
+
 func HandleBird(s *api.Service) {
 	birds, err := s.GetBirds()
 	if err != nil {
@@ -230,12 +228,11 @@ func HandleBird(s *api.Service) {
 			s.Logger.Error(err.Error())
 		}
 	}
-	//TODO: Wait the birdHunting channel when a bird gets in Hunting status then wait the 12 hours for Complete it
+	// TODO: Wait the birdHunting channel when a bird gets in Hunting status then wait the 12 hours for Complete it
 	go func() {
-
 	}()
-
 }
+
 func isInList(list []string, item string) bool {
 	for _, v := range list {
 		if v == item {
@@ -244,6 +241,7 @@ func isInList(list []string, item string) bool {
 	}
 	return false
 }
+
 func WaitUntilNewDay() {
 	now := time.Now().UTC()
 
@@ -253,6 +251,7 @@ func WaitUntilNewDay() {
 
 	time.Sleep(time.Until(nextDayWithOneHour))
 }
+
 func HandleDaily(s *api.Service) {
 	loginStreak := s.GetDailyLoginStreak()
 	streakRewards := s.GetStreakReward()
@@ -297,5 +296,7 @@ func HandleDaily(s *api.Service) {
 	// After waiting for the next day, you can call the function again if needed.
 	// You can loop back here to continue the process.
 	HandleDaily(s)
+}
 
+func handleGuild() {
 }

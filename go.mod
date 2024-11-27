@@ -10,7 +10,4 @@ require (
 
 require go.uber.org/multierr v1.11.0 // indirect
 
-require (
-	github.com/Nexus-Telegram/nexus v0.1.8
-	golang.org/x/net v0.31.0 // indirect
-)
+require golang.org/x/net v0.31.0 // indirect

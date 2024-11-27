@@ -3,16 +3,17 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"net/http"
+	"net/url"
+	"time"
+
 	nexusUtils "github.com/nexus-telegram/nexus-core/utils"
 	"github.com/nexus-telegram/seed-bot/api"
 	"github.com/nexus-telegram/seed-bot/utils"
 
 	"github.com/nexus-telegram/seed-bot/handler"
-	"net/http"
-	"net/url"
-	"time"
 
-	nexuslogger "github.com/Nexus-Telegram/nexus/logger"
+	nexuslogger "github.com/nexus-telegram/nexus-core/logger"
 	"go.uber.org/zap"
 
 	"github.com/go-resty/resty/v2"

@@ -1,5 +1,3 @@
-github.com/Nexus-Telegram/nexus v0.1.8 h1:IMGH4Oml5wGSrwOKCLP8L2uV68rfP85XRvgWA3TB76M=
-github.com/Nexus-Telegram/nexus v0.1.8/go.mod h1:lqIWfD/6echTWRTSKuYeZED7ZlJANz0+fc8eg5eUuBw=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-resty/resty/v2 v2.16.0 h1:qpKalHWI2bpp9BIKlyT8TYWEJXOk1NuKbfiT3RRnzWc=

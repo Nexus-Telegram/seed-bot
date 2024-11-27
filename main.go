@@ -13,13 +13,13 @@ import (
 
 	nexuslogger "github.com/Nexus-Telegram/nexus/logger"
 	"github.com/Nexus-Telegram/nexus/utils"
+	"go.uber.org/zap"
 
 	"github.com/go-resty/resty/v2"
 )
 
 func authenticate(s *api.Service) {
 	res, err := s.Client.R().Post("/profile")
-
 	if err != nil {
 		s.Logger.Error("Request failed: " + err.Error())
 		return
@@ -44,8 +44,27 @@ func authenticate(s *api.Service) {
 		return
 	}
 	s.Logger.Info("User connected successfully")
-
 }
+
+func processAccount(queryID string, client *resty.Client, logger *zap.Logger) {
+	authHeaders := map[string]string{
+		"Telegram-Data": queryID,
+	}
+	headers := utils.MergeHeaders(seedUtils.GetCommonHeaders(), authHeaders)
+	client.SetHeaders(headers)
+
+	service := api.NewService(client, logger)
+	authenticate(service)
+
+	go handler.HandleInitializeBird(service)
+	go handler.HandleDaily(service)
+	go handler.HandleSeedClaim(service)
+	go handler.HandleWormCatching(service)
+	// go handler.HandleUpgrade(service)
+	go handler.HandleTasks(service)
+	go handler.HandleBird(service)
+}
+
 func main() {
 	client := resty.New().SetTimeout(30 * time.Second)
 	client.SetBaseURL("https://alb.seeddao.org/api/v1")
@@ -76,24 +95,7 @@ func main() {
 
 	logger.Info(fmt.Sprintf("found %d query ids in ", len(queryIDs)))
 	for _, queryID := range queryIDs {
-
-		authHeaders := map[string]string{
-			"Telegram-Data": queryID,
-		}
-		headers := utils.MergeHeaders(seedUtils.GetCommonHeaders(), authHeaders)
-		client.SetHeaders(headers)
-
-		service := api.NewService(client, logger)
-		authenticate(service)
-
-		go handler.HandleInitializeBird(service)
-		go handler.HandleDaily(service)
-		go handler.HandleSeedClaim(service)
-		go handler.HandleWormCatching(service)
-		//go handler.HandleUpgrade(service)
-		go handler.HandleTasks(service)
-		go handler.HandleBird(service)
-
+		go processAccount(queryID, client, logger)
 	}
 	select {}
 }

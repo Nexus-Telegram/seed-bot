@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/nexus-telegram/seed-bot/api"
 	"net/http"
 	"net/url"
-	"nexus-seed-bot/api"
 	"nexus-seed-bot/handler"
 	"time"
 

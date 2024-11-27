@@ -2,6 +2,7 @@ package api
 
 import (
 	"fmt"
+
 	"github.com/nexus-telegram/seed-bot/types"
 
 	"github.com/go-resty/resty/v2"
@@ -43,7 +44,7 @@ func (s *Service) GetBalance() int {
 		s.Logger.Error("Error while fetching balance:", zap.Error(err))
 	}
 	balance := response.Result().(*types.Balance).Balance
-	//s.BalanceCh <- balance
+	// s.BalanceCh <- balance
 
 	return balance
 }
@@ -56,4 +57,14 @@ func (s *Service) GetSettings() (*types.Settings, error) {
 	}
 	settings := response.Result().(*types.Settings)
 	return settings, nil
+}
+
+func GetRoomsList(client *resty.Client) *types.RoomsList {
+	var roomsList types.RoomsList
+	_, err := client.R().SetResult(&roomsList).Get("/battle-seed/room-type/list")
+	if err != nil {
+		panic(err)
+	}
+
+	return &roomsList
 }

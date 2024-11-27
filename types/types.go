@@ -95,9 +95,8 @@ type Settings struct {
 			Phoenix int64 `json:"phoenix"`
 			Sparrow int   `json:"sparrow"`
 		} `json:"energy-max-bird"`
-		Fee       int `json:"fee"`
-		HappyDays struct {
-		} `json:"happy-days"`
+		Fee              int      `json:"fee"`
+		HappyDays        struct{} `json:"happy-days"`
 		HappyDaysRewards []struct {
 			Id          string `json:"id"`
 			Type        string `json:"type"`
@@ -151,4 +150,19 @@ type Balance struct {
 type ErrorResponse struct {
 	Code    string `json:"code"`
 	Message string `json:"message"`
+}
+type RoomsList struct {
+	Data []struct {
+		Id             string    `json:"id"`
+		Name           string    `json:"name"`
+		EntryFee       int64     `json:"entry_fee"`
+		SeedReward     int64     `json:"seed_reward"`
+		SizeX          int       `json:"size_x"`
+		SizeY          int       `json:"size_y"`
+		NumberPointMax int       `json:"number_point_max"`
+		Status         string    `json:"status"`
+		Online         int       `json:"online"`
+		CreatedAt      time.Time `json:"created_at"`
+		UpdatedAt      time.Time `json:"updated_at"`
+	} `json:"data"`
 }

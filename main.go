@@ -13,10 +13,8 @@ import (
 
 	"github.com/nexus-telegram/seed-bot/handler"
 
-	nexuslogger "github.com/nexus-telegram/nexus-core/logger"
-	"go.uber.org/zap"
-
 	"github.com/go-resty/resty/v2"
+	nexuslogger "github.com/nexus-telegram/nexus-core/logger"
 )
 
 func authenticate(s *api.Service) {
@@ -38,35 +36,16 @@ func authenticate(s *api.Service) {
 
 		// Check if the error code indicates an existing user
 		if responseData["code"] == "invalid-request" && responseData["message"] == "user with telegram id already exist" {
-			s.Logger.Info("User is already connected with this Telegram ID")
+			s.Logger.Debug("User is already connected with this Telegram ID")
 		} else {
 			s.Logger.Info("Received error: " + responseData["message"])
 		}
 		return
 	}
-	s.Logger.Info("User connected successfully")
+	s.Logger.Debug("User connected successfully")
 }
 
-func processAccount(queryID string, client *resty.Client, logger *zap.Logger) {
-	authHeaders := map[string]string{
-		"Telegram-Data": queryID,
-	}
-	headers := nexusUtils.MergeHeaders(utils.GetCommonHeaders(), authHeaders)
-	client.SetHeaders(headers)
-
-	service := api.NewService(client, logger)
-	authenticate(service)
-
-	go handler.HandleInitializeBird(service)
-	go handler.HandleDaily(service)
-	go handler.HandleSeedClaim(service)
-	go handler.HandleWormCatching(service)
-	// go handler.HandleUpgrade(service)
-	go handler.HandleTasks(service)
-	go handler.HandleBird(service)
-}
-
-func main() {
+func processAccount(queryID string) {
 	client := resty.New().SetTimeout(30 * time.Second)
 	client.SetBaseURL("https://alb.seeddao.org/api/v1")
 	proxyHost := "rp.proxyscrape.com:6060"
@@ -88,15 +67,35 @@ func main() {
 	} else {
 		fmt.Println("Proxy working", resp.String())
 	}
-	logger, err := nexuslogger.NewLogger(false)
-	if err != nil {
+	logger := nexuslogger.New()
+	if logger == nil {
 		panic(err)
 	}
+	authHeaders := map[string]string{
+		"Telegram-Data": queryID,
+	}
+	headers := nexusUtils.MergeHeaders(utils.GetCommonHeaders(), authHeaders)
+	client.SetHeaders(headers)
+
+	service := api.NewService(client, logger)
+	authenticate(service)
+
+	go handler.HandleInitializeBird(service)
+	go handler.HandleDaily(service)
+	go handler.HandleSeedClaim(service)
+	go handler.HandleWormCatching(service)
+	// go handler.HandleUpgrade(service)
+	go handler.HandleTasks(service)
+	go handler.HandleBird(service)
+}
+
+func main() {
+
 	queryIDs := nexusUtils.ParseQueryIDs()
 
-	logger.Info(fmt.Sprintf("found %d query ids in ", len(queryIDs)))
 	for _, queryID := range queryIDs {
-		go processAccount(queryID, client, logger)
+		go processAccount(queryID)
+		time.Sleep(1 * time.Second)
 	}
 	select {}
 }

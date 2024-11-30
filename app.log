@@ -1,0 +1,594 @@
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"seed-bot/main.go:39","msg":"User is already connected with this Telegram ID"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:44","msg":"Waiting for 06h13m to catch the worm."}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for 01h53m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 15f2ca4c-9897-4893-abf4-8160865e9d00"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Join the Frog team now! completed successfully "}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: b46f4fd7-a26a-4e83-8377-783d2fd8a543"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Spin in Boinkers completed successfully "}
+{"level":"DEBUG","time":"30/11/2024 09:46 AM","caller":"api/eggs.go:40","msg":"First egg caught successfully"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 9261a222-ef94-493b-b18e-8e0a98c9b9a6"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Play Meworld and earn airdrop completed successfully "}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:198","msg":"all initialization tasks successfully"}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"fb2ac6c1-6bb1-4389-9c08-076dcce010ea","type":"academy","name":"#19 What is Market Maker?","description":"youtube seed learn 19","reward_amount":2000000000,"sort":19,"metadata":{"url":"https://youtu.be/sbdtHCLRSQU","name":"SEED","image_url":"https://static.seeddao.org/df75c44c-05f6-4215-9cf3-a7f0c2d7ac8d.png","group_name":"Our Garden","group_order":2,"query_params":{"min_gem":"","user_id":"","ref_code":""},"ios_url":"https://youtu.be/sbdtHCLRSQU","once":true,"excluded":true,"answer_length":20},"repeats":1,"tickets":0,"task_user":null},"stacktrace":"github.com/nexus-telegram/seed-bot/handler.HandleTasks\n\t/home/jacoba/Documentos/nexus-telegram-bots/seed-bot/handler/handler.go:127"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 90bf490b-893d-4cce-ba73-169395fa9d0b"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Follow SEED X completed successfully "}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"b70db934-28b3-4bab-a92d-a3351519dfa2","type":"academy","name":"#18 What Affects Token Price?","description":"youtube seed learn 18","reward_amount":2000000000,"sort":18,"metadata":{"url":"https://www.youtube.com/watch?v=6NGVQqIHavk","name":"SEED","image_url":"https://static.seeddao.org/df75c44c-05f6-4215-9cf3-a7f0c2d7ac8d.png","group_name":"Our Garden","group_order":2,"query_params":{"min_gem":"","user_id":"","ref_code":""},"ios_url":"https://www.youtube.com/watch?v=6NGVQqIHavk","once":true,"excluded":true,"answer_length":20},"repeats":1,"tickets":0,"task_user":null},"stacktrace":"github.com/nexus-telegram/seed-bot/handler.HandleTasks\n\t/home/jacoba/Documentos/nexus-telegram-bots/seed-bot/handler/handler.go:127"}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"56{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 90bf490b-893d-4cce-ba73-169395fa9d0b"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Follow SEED X completed successfully "}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"b70db934-28b3-4bab-a92d-a3351519dfa2","type":"academy","name":"#18 What Affects Token Price?","description":"youtube seed learn 18","reward_amount":2000000000,"sort":18,"metadata":{"url":"https://www.youtube.com/watch?v=6NGVQqIHavk","name":"SEED","image_url":"https://static.seeddao.org/df75c44c-05f6-4215-9cf3{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 3e1db69b-a39a-47c9-b56d-411084dc5624"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Subsribe to be a SEED pro completed successfully "}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 5575e8b1-c54d-45d0-b8b9-82e0f9a76da5"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Retweet SEED news completed successfully "}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"378e971c-d7a2-4590-8328-e80587080d43","type":"academy","name":"#16 BTC Price Prediction","description":"youtube seed learn 16","reward_amount":2000000000,"sort":16,"metadata":{"url":"https://youtu.be/EueOxF8r75s","name":"SEED","image_url":"https://static.seeddao.org/df75c44c-05f6-4215-9cf3-a7f0c2d7ac8d.png","group_name":"Our Garden","group_order":2,"query_params":{"min_gem":"","user_id":"","ref_code":""},"ios_url":"https://youtu.be/EueOxF8r75s","once":true,"excluded":true,"answer_length":7},"repeats":1,"tickets":0,"task_user":null},"stacktrace":"github.com/nexus-telegram/seed-bot/handler.HandleTasks\n\t/home/jacoba/Documentos/nexus-telegram-bots/seed-bot/handler/handler.go:127"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 2805abcb-8397-40e1-807e-c50cf810c171"}
+{"level":"INFO","ti{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 5575e8b1-c54d-45d0-b8b9-82e0f9a76da5"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Retweet SEED news completed successfully "}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"378e971c-d7a2-4590-8328-e80587080d43","type":"academy","name":"#16 BTC Price Prediction","description":"youtube seed learn 16","reward_amount":2000000000,"sort":16,"metadata":{"url":"https://youtu.be/EueOxF8r75s","name":"SEED","image_url":"https://static.seeddao.org/df75c44c-05f6-4215-9cf3-a7f0c2d7ac8d.png","group_name":"Our Garden","group_order":2,"query_params":{"min_gem":"","user_id":"","ref_code":""},"ios_url":"https://youtu.be/EueOxF8r75s","once":true,"excluded":true,"answer_length":7},"repeats":1,"tickets":0,"task_user":null},"stacktrace":"github.com/nexus-telegram/seed-bot/handler.HandleTasks\n\t/home/jacoba/Documentos/nexus-telegram-bots/seed-bot/handler/handler.go:127"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: 2805abcb-8397-40e1-807e-c50cf810c171"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Subscribe TON channels completed successfully "}
+{"level":"ERROR","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:127","msg":"Secret Not found for task","task":{"id":"9e32a590-d735-40e4-b6c8-e9aa4cb38563","type":"academy","name":"#15 What is Tokenomics?","description":" youtube seed learn 15","reward_amount":2000000000,"sort":15,"metadata":{"url":"https://www.youtube.com/watch?v=WvfiG_mhN80","name":"SEED","image_url":"https://static.seeddao.org/df75c44c-05f6-4215-9cf3-a7f0c2d7ac8d.png","group_name":"Our Garden","group_order":2,"query_params":{"min_gem":"","user_id":"","ref_code":""},"ios_url":"https://www.y{"level":"DEBUG","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:122","msg":"Task #12 What is NFT? completed successfully"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: b380ece7-5b68-4a1e-9344-889769633d14"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Follow SEED Combinator completed successfully "}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: dc1bc321-a395-422a-be0d-f20bb6234d6e"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:114","msg":"Task Subscribe to be a SEED Pro completed successfully "}
+{"level":"DEBUG","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:122","msg":"Task #11 Pre-market Explained completed successfully"}
+{"level":"DEBUG","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:122","msg":"Ta{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"api/tasks.go:45","msg":"Success completing task: b380ece7-5b68-4a1e-9344-889769633d14"}
+{"level":"INFO","time":"30/11/2024 09:46{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"api/tasks.go:45","msg":"Success completing task: b380ece7-5b68-4a1e-9344-889769633d14"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:108","msg":"Task Follow SEED Combinator completed successfull"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"api/tasks.go:45","msg":"Success completing task: dc1bc321-a395-422a-be0d-f20bb6234d6e"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:108","msg":"Task Subscribe to be a SEED Pro completed successfull"}
+"Task Follow SEED Combinator completed successfull"}
+{"level{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"api/tasks.go:45","msg":"Success completing task: b380ece7-5b68-4a1e-9344-889769633d14"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:108","msg":"Task Follow SEED Combinator completed successfull"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"api/tasks.go:45","msg":"Success completing task: dc1bc321-a395-422a-be0d-f20bb6234d6e"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:108","msg":"Task Subscribe to be a SEED Pro completed successfull"}
+essfull"}
+/tasks.go:45","msg":"Success completing task: dc1bc321{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"api/tasks.go:45","msg":"Success completing task: b380ece7-5b68-4a1e-9344-889769633d14"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:108","msg":"Task Follow SEED Combinator completed successfull"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"api/tasks.go:45","msg":"Success completing task: dc1bc321-a395-422a-be0d-f20bb6234d6e"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:108","msg":"Task Subscribe to be a SEED Pro completed successfull"}
+:"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:46 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:47 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:48 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:49 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:50 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:50 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:50 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:50 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}
+{"level":"INFO","time":"30/11/2024 09:50 AM","caller":"handler/handler.go:30","msg":"Seed claimed"}
+{"level":"INFO","time":"30/11/2024 09:50 AM","caller":"handler/handler.go:33","msg":"Waiting for -2562045h-47m to claim seed"}

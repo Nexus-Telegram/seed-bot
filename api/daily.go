@@ -86,14 +86,25 @@ func (s *Service) ClaimLoginBonus() *types.LoginBonusesCreate {
 		return nil
 	}
 	if res.StatusCode() == http.StatusBadRequest {
-		errorResponse := res.Result().(*types.ErrorResponse)
-		if errorResponse.Code == "invalid-request" && errorResponse.Message == "already claimed for today" {
+		// Verifica se o resultado pode ser convertido para o tipo esperado
+		errorResult, ok := res.Result().(*types.ErrorResponse)
+		if !ok {
+			s.Logger.Error("Unexpected error response type",
+				zap.String("status", res.Status()),
+				zap.Any("rawBody", string(res.Body())),
+			)
+			return nil
+		}
+
+		// Valida os campos do ErrorResponse
+		if errorResult.Code == "invalid-request" && errorResult.Message == "already claimed for today" {
 			s.Logger.Info("Daily already claimed")
 			return nil
 		}
+
 		s.Logger.Error("Failed to fetch login bonuses",
 			zap.String("status", res.Status()),
-			zap.Any("data", string(res.Body())),
+			zap.Any("errorData", errorResult),
 		)
 		return nil
 	}

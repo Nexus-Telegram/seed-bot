@@ -124,7 +124,7 @@ func HandleTasks(s *api.Service) {
 				}
 				continue
 			}
-			s.Logger.Error("Secret Not found for task", zap.Any("task", task))
+			s.Logger.Debug("Secret Not found for task", zap.Any("task", task))
 			continue
 		}
 		continue
@@ -253,6 +253,9 @@ func WaitUntilNewDay() {
 func HandleDaily(s *api.Service) {
 	loginStreak := s.GetDailyLoginStreak()
 	streakRewards := s.GetStreakReward()
+	if streakRewards == nil {
+		return
+	}
 	for _, reward := range streakRewards.Data {
 		var createdRewards []string
 		if reward.Status == types.Created {
